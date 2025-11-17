@@ -7,7 +7,7 @@ public class UserData {
 
     private String id;
     private String email;
-    private String fist_name;
+    private String first_name;
     private String last_name;
 
     public UserData() {}
@@ -28,12 +28,12 @@ public class UserData {
         this.email = email;
     }
 
-    public String getFist_name() {
-        return fist_name;
+    public String getFirst_name() {
+        return first_name;
     }
 
-    public void setFist_name(String fist_name) {
-        this.fist_name = fist_name;
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
     }
 
     public String getLast_name() {

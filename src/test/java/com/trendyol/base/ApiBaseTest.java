@@ -1,5 +1,6 @@
 package com.trendyol.base;
 
+import com.trendyol.utils.ConfigReader;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.http.ContentType;
@@ -18,9 +19,9 @@ public abstract class ApiBaseTest {
     static void setup() {
 
         spec = new RequestSpecBuilder()
-                .setBaseUri("https://reqres.in/api/")
+                .setBaseUri(ConfigReader.getBaseUri())
                 .setContentType(ContentType.JSON)
-                .addHeader("x-api-key", "reqres-free-v1")
+                .addHeader("x-api-key", ConfigReader.getApiKey())
                 .build();
 
         ResponseSpec200 = new ResponseSpecBuilder()
